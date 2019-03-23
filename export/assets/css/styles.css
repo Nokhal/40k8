@@ -1,0 +1,19 @@
+.bglightblue {
+  background-color: rgb(238, 242, 255);
+}
+
+.greentext {
+  color: rgb(120, 153, 34);
+}
+
+.font4channel {
+  font-family: arial, helvetica, sans-serif;
+}
+
+.replybox {
+  background-color: rgb(214, 218, 240);
+  border: 1px solid #b7c5d9;
+  border-left: none;
+  border-top: none;
+}
+

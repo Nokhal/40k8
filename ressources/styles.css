@@ -1,0 +1,191 @@
+.bglightblue {
+  background-color: rgb(238, 242, 255);
+}
+
+.greentext {
+  color: rgb(120, 153, 34);
+}
+
+.font4channel {
+  font-family: arial, helvetica, sans-serif;
+}
+
+.replybox {
+  background-color: rgb(214, 218, 240);
+  border: 1px solid #b7c5d9;
+  border-left: none;
+  border-top: none;
+  padding: 2px;
+  margin: 4px;
+}
+
+.red4{
+	color:#d00;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.contentcontainer{
+	margin-left:1em;
+	margin-right:1em;
+	display:flex;
+    flex-direction:row;
+	/* justify-content: space-around; */
+	align-items: flex-start;
+}
+
+.datacontentroot{
+	padding:1em;
+}
+
+.rosterdiv{
+	padding:1em;
+}
+
+.flexelem{
+	display:flex;
+	/* flex-direction:column; */
+}
+
+.rosterzone{
+	width:50%;
+}
+
+.datazone{
+	width:50%;
+}
+
+.inl{
+	display:inline;
+}
+
+.activated{
+	background-color: #fff;
+}
+
+.resizablehorizontal{
+	resize: horizontal;
+}
+
+.datasheetdiv{
+	width: 95vw;
+}
+
+.roleicon{
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	vertical-align: top;
+}
+
+.troop{
+	background-image: url("img/troop.png");
+}
+
+.elite{
+	background-image: url("img/elite.png");
+}
+
+.fa{
+	background-image: url("img/fa.png");
+}
+
+.flyer{
+	background-image: url("img/flyer.png");
+}
+
+.fort{
+	background-image: url("img/fort.png");
+}
+
+.hvy{
+	background-image: url("img/hvy.png");
+}
+
+.hq{
+	background-image: url("img/hq.png");
+}
+
+.low{
+	background-image: url("img/low.png");
+}
+
+.trans{
+	background-image: url("img/trans.png");
+}
+
+.profilecontainerRow{
+	margin-left:1em;
+	margin-right:1em;
+	display:flex;
+    flex-direction:row;
+	/* justify-content: space-around; */
+	align-items: flex-start;
+}
+
+.profileContainerElem{
+	display:flex;
+	width : 5%
+}
+
+.profileContainerFirst{
+	display:flex;
+	width : 20%
+}
+
+.weaponContainerName{
+	display:flex;
+	width : 20%
+}
+
+.weaponContainerRange{
+	display:flex;
+	width : 10%
+}
+
+.weaponContainerType{
+	display:flex;
+	width : 10%
+}
+
+.weaponContainerS{
+	display:flex;
+	width : 7%
+}
+
+.weaponContainerAP{
+	display:flex;
+	width : 7%
+}
+
+.weaponContainerD{
+	display:flex;
+	width : 7%
+}
+
+.weaponContainerAbi{
+	display:flex;
+	width : 40%
+}
+
+..weaponContainerNotes{
+	display:flex;
+	width : 80%
+}
+
+.aWeaponBox{
+	 border-bottom: 1px solid #7d89cf;
+}
+
+.aWeaponBox:hover{
+	background-color:white;
+}
+
+.whitehoverable:hover{
+	background-color:white;
+}

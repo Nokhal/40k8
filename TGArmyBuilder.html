@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="ressources/styles.css">
+		<title>/tg/ Army Builder</title>
+	</head>
+	<body class="bglightblue">
+		<header>
+			<h1 class="text-center">/tg/ 40kg Army Builder</h1>
+			<button onclick="toggleHelp()">[?]</button>
+
+			<p id="helpText" style="display:none;">
+				Last updated : 2019 02 23 <br><br>
+				The goal of the army builder is simple : <br>
+				:: Allowing you to quickly build a battle-forged matched play army using the latest 40k rules and sharing it easily. ::<br>
+				<br>
+				Due to GW cavalier attitude to rules writing, there will always be leeways between 
+				RAI and RAW : complete rule checking from within an automated tool is impossible 
+				if the automated tool itself is not the authority on what is legal or not.  <br>
+				<br>
+				Henceforth, the objective of this tool is not to enforce all the rule for the players, but instead
+				to present all the relevant rules directly in lieu of having to flip through hundreds of pages
+				of maybe outdated informations. <br>
+				<br>
+				This tool was built because battlescribe fail at every corner :  <br>
+				-The text export format is shit <br>
+				-Due to the amateurism of it's contributors and ego wars, the catalogs are riddled with bugs and incorrect informations <br>
+				-No information on one of the most important part of the game : stratagems <br>
+				-Barely any rules are properly sourced <br> <br> 
+				To save the army builder, simply save the page. (ctrl+s). It doesn't need internet to work. <br>
+				To export your roster, simply copy paste the text to somewhere (notes, google doc, whatever) <br>
+				To import a roster, paste it into the import dialog <br>
+				<br>
+				<br>
+				Be excellen/tg/entlemen in your games.
+			</p>
+		</header>
+		<div class ="contentcontainer">
+			<div class="rosterzone flexelem">
+				<div class="rosterdiv replybox" id="RosterRoot">
+					
+					
+				</div> 
+				<br>
+				
+			</div>
+			<div class="datazone flexelem">
+				<div>
+					<div class="flexelem" style="margin-bottom:1em;">
+						<button onclick="importPopup()" id="importButton">Show Import Dialog</button>
+						<button onclick="" disabled>Check Legality</button>
+						<button onclick="generateNewRoster()">Reset</button>
+						<button onclick="devtest()">Dev</button>
+					</div>
+					<div id="importDiv"  style="display:none;">
+						<textarea id="importTextArea" name="importTextAreaName" placeholder="Paste your army list here"></textarea>
+						<br>
+						<button onclick="startImport()">Confirm Import</button>
+					</div>
+					<div class="flexelem">
+						<div class="datacontentroot replybox" id="DataRoot">
+							<p>Import a List or start editing your roster</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+				
+		</div>
+		<div class ="contentcontainer">
+			<div class="datasheetzone flexelem">
+				<div class="datasheetdiv replybox" id="DatasheetRoot">
+					<div class="roleicon trans"></div>
+					<b>Kekistani Squad</b> - 3Pl <br>
+					<hr>
+					<div>
+						<div class="profilecontainerRow">
+							<div class="profileContainerFirst"><b>Name</b></div>
+							<div class="profileContainerElem"><b>M</b></div>
+							<div class="profileContainerElem"><b>WS</b></div>
+							<div class="profileContainerElem"><b>BS</b></div>
+							<div class="profileContainerElem"><b>S</b></div>
+							<div class="profileContainerElem"><b>T</b></div>
+							<div class="profileContainerElem"><b>W</b></div>
+							<div class="profileContainerElem"><b>A</b></div>
+							<div class="profileContainerElem"><b>Ld</b></div>
+							<div class="profileContainerElem"><b>Sv</b></div>
+						</div>
+					
+						<div class="modelProfile whitehoverable">
+							<div class="profilecontainerRow">
+								<div class="profileContainerFirst">Kekistani trooper</div>
+								<div class="profileContainerElem">6"</div>
+								<div class="profileContainerElem">4+</div>
+								<div class="profileContainerElem">4+</div>
+								<div class="profileContainerElem">3</div>
+								<div class="profileContainerElem">3</div>
+								<div class="profileContainerElem">1</div>
+								<div class="profileContainerElem">1</div>
+								<div class="profileContainerElem">6</div>
+								<div class="profileContainerElem">5+</div>
+							</div>
+						</div>
+						<div class="modelProfile whitehoverable">
+							<div class="profilecontainerRow">
+								<div class="profileContainerFirst">Kekistani Sargeant</div>
+								<div class="profileContainerElem">6"</div>
+								<div class="profileContainerElem">4+</div>
+								<div class="profileContainerElem">4+</div>
+								<div class="profileContainerElem">3</div>
+								<div class="profileContainerElem">3</div>
+								<div class="profileContainerElem">1</div>
+								<div class="profileContainerElem">2</div>
+								<div class="profileContainerElem">7</div>
+								<div class="profileContainerElem">5+</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="wargearsection">
+						This unit contain 1 Trap and 9 fanboys.<br>•They come armed with huge ballz of steel.
+					</div>
+					
+					<hr>
+					<div class="wargearoptionssection">
+					<b>Wargear options</b><br>
+					The penis can become feminine.
+					</div>
+					
+					<hr>
+					<div class="abilitiesection">
+					<b>Abilities </b><br>
+						<div class="whitehoverable">
+							<span class="AbilityName">§
+								Traps are not gay
+							</span> : 
+								Actually they are. 
+						</div>
+					</div>
+					
+					<hr>
+					<div class="factionkeywordssection">
+					<b>Faction keywords</b><br>
+					<span class="whitehoverable">IMPERIUM</span>, <span class="whitehoverable">KEKISTAN</span>
+					</div>
+					
+					<hr>
+					<div class="generickeywordssection">
+					<b>Keywords</b><br>
+					<span class="whitehoverable">INFANTRY</span>, <span class="whitehoverable">GAYLORDS</span>
+					</div>
+					
+					<hr>
+					<div class="weaponsection">
+						<div class="profilecontainerRow">
+							<div class="weaponContainerName"><b>Weapon</b></div>
+							<div class="weaponContainerRange"><b>Range</b></div>
+							<div class="weaponContainerType"><b>Type</b></div>
+							<div class="weaponContainerS"><b>S</b></div>
+							<div class="weaponContainerAP"><b>AP</b></div>
+							<div class="weaponContainerD"><b>D</b></div>
+							<div class="weaponContainerAbi"><b>Abilities</b></div>
+						</div>
+						
+						<div class="aWeaponBox">
+							<div class="profilecontainerRow">
+								<div class="weaponContainerName">Faggun</div>
+								<div class="weaponContainerRange">12"</div>
+								<div class="weaponContainerType">Rapid Fire 1</div>
+								<div class="weaponContainerS">3</div>
+								<div class="weaponContainerAP">-</div>
+								<div class="weaponContainerD">1</div>
+								<div class="weaponContainerAbi">-</div>
+							</div>
+						</div>
+						
+						<div class="aWeaponBox">
+							<div class="profilecontainerRow">
+								<div class="weaponContainerName">Kheres Pattern assault cannon</div>
+								<div class="weaponContainerRange">24"</div>
+								<div class="weaponContainerType">Heavy 6</div>
+								<div class="weaponContainerS">7</div>
+								<div class="weaponContainerAP">-1</div>
+								<div class="weaponContainerD">1</div>
+								<div class="weaponContainerAbi">-</div>
+							</div>
+						</div>
+						
+						<div class="aWeaponBox">
+							<div class="profilecontainerRow">
+								<div class="weaponContainerName">Combi-Plasma</div>
+								<div class="weaponContainerNotes">When attacking with this weapon, choose one or both of the profiles below. If you choose both, substract 1 from all hit rolls for this weapon</div>
+							</div>
+							<div class="profilecontainerRow">
+								<div class="weaponContainerName">Faggun</div>
+								<div class="weaponContainerRange">12"</div>
+								<div class="weaponContainerType">Rapid Fire 1</div>
+								<div class="weaponContainerS">3</div>
+								<div class="weaponContainerAP">-</div>
+								<div class="weaponContainerD">1</div>
+								<div class="weaponContainerAbi">-</div>
+							</div>
+							<div class="profilecontainerRow">
+								<div class="weaponContainerName">Plasmaaggun</div>
+								<div class="weaponContainerRange">24"</div>
+								<div class="weaponContainerType">Rapid Fire 1</div>
+								<div class="weaponContainerS">7</div>
+								<div class="weaponContainerAP">-1</div>
+								<div class="weaponContainerD">1</div>
+								<div class="weaponContainerAbi">See plasma gun</div>
+							</div>
+						</div>
+						
+					</div> 
+					
+					<hr>
+					<div class="rulesSection">
+					<b>Rules </b><br>
+						<div class="whitehoverable">
+							<span class="AbilityName">§
+								Traps are not gay
+							</span> : 
+								Actually they are. 
+								<br>
+								<i>Source : My Ass</i>
+						</div>
+					</div>
+					
+					
+					
+				</div> 
+				<br>
+			
+			</div>
+		</div>
+	
+		<script src="ressources/interface.js"></script>
+		<script src="ressources/40k/initial.js"></script> 
+		<script src="ressources/40k/codex_AstraMilitarum.js"></script> 
+	</body>
+</html>
